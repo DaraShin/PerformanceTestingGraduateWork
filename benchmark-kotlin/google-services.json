@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "720653153710",
+    "project_id": "benchmarks-cc919",
+    "storage_bucket": "benchmarks-cc919.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720653153710:android:718130827e20eb545e443f",
+        "android_client_info": {
+          "package_name": "com.shinkevich.benchmark_kotlin2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqTiO3E-lWnzeKlHZTIsLOukSdX8FTYGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
