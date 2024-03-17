@@ -98,12 +98,7 @@ public class AsyncDBBenchmark {
             List<Future<List<Person>>> results = new ArrayList<>();
             for (int i = 0; i < tasksNum; i++) {
                 int finalI = i;
-                results.add(executorService.submit(new Callable<List<Person>>() {
-                    @Override
-                    public List<Person> call() throws Exception {
-                        return personDao.getByNameStart(getNameStartForSearch(finalI));
-                    }
-                }));
+                results.add(executorService.submit(() -> personDao.getByNameStart(getNameStartForSearch(finalI))));
             }
             for (Future<List<Person>> result : results) {
                 result.get();
@@ -111,7 +106,7 @@ public class AsyncDBBenchmark {
         }
     }
 
-    @Test
+//    @Test
 //    public void liveDataTest() throws InterruptedException {
 //        BenchmarkState state = benchmarkRule.getState();
 //        DBTest dbTest = new DBTest(InstrumentationRegistry.getInstrumentation().getContext());
